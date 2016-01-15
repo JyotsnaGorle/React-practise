@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default class Card extends React.Component {
+export class Card extends React.Component {
     render() {
-        const {title,description} = this.props.card;
-        return <div className="card">
-            <h4 className="card__title">{title}</h4>
-            <p className="card__description">{description}</p>
+        const {id,title,description,lane,classType} = this.props.cardDetails;
+        return <div className={classType}>
+            <h2>{id}</h2>
+            <h2>{title}</h2>
         </div>;
     }
 }

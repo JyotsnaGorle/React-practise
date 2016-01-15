@@ -1,0 +1,22 @@
+.swimlane{
+    width: 33%;
+    background: #ff0000;
+    float: left;
+}
+
+.in_dev, .to_do, .done{
+    width: 33%;
+    float: left;
+}
+
+.in_dev{
+    background: #cccc99;
+}
+
+.to_do{
+    background: #ffdddd;
+}
+
+.done{
+    background: #6699cc;
+}

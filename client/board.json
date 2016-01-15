@@ -1,0 +1,53 @@
+{
+    "name": "My Flink Board",
+    "description": "Board to flink my life",
+    "createdBy": "jyotsna",
+    "createdOn": 1452834260325,
+    "swimlanes": [
+        {
+            "name": "Ready for Dev",
+            "cards": [
+                {
+                    "name": "Card 1",
+                    "attr1": "val1",
+                    "attr2": "val2"
+                },
+                {
+                    "name": "Card 2",
+                    "attr1": "val1",
+                    "attr2": "val2"
+                }
+            ]
+        },
+        {
+            "name": "In Dev",
+            "cards": [
+                {
+                    "name": "Card 1",
+                    "attr1": "val1",
+                    "attr2": "val2"
+                },
+                {
+                    "name": "Card 2",
+                    "attr1": "val1",
+                    "attr2": "val2"
+                }
+            ]
+        },
+        {
+            "name": "Done",
+            "cards": [
+                {
+                    "name": "Card 1",
+                    "attr1": "val1",
+                    "attr2": "val2"
+                },
+                {
+                    "name": "Card 2",
+                    "attr1": "val1",
+                    "attr2": "val2"
+                }
+            ]
+        }
+    ]
+}

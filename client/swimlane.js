@@ -3,15 +3,16 @@ import Card from './card';
 
 export class Swimlane extends React.Component {
     render() {
-        const {id,title,cards} = this.props.swimlane;
-        return <div key={id} className="swimlane">
-            <h3>{title}</h3>
-            <button onClick={() => this.props.onDelete(this.props.swimlane)}>x</button>
-            {cards.map(card => <Card key={card.id} card={card}/>)}
+        console.log(this.props.cardList);
+        var cards =[];
+        this.props.cardList.forEach(function(card){
+            cards.push(<Card cardDetails = {card} key = {card.id}/>);
+        });
+        console.log(cards);
+
+        return <div className="swimlane">
+            <h3>Swim</h3>
+            {cards}
         </div>;
     }
 }
-Swimlane.propTypes = {
-    swimlane: React.PropTypes.object,
-    onDelete: React.PropTypes.function
-};
