@@ -5,13 +5,14 @@ import {Swimlane} from './swimlane';
 export class Board extends React.Component {
     constructor() {
         super();
-        this.state  = $.ajax({
+        var thisState = this.state;
+        $.ajax({
               url: "/client/board.json",
               dataType: "json"
             }).done(function(response) {
               this.state = response;
             });
-      console.log(this.state);
+      console.log(thisState);
     }
     render() {
       var lanes = [];
