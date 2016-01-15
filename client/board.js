@@ -5,29 +5,22 @@ import {Swimlane} from './swimlane';
 export class Board extends React.Component {
     constructor() {
         super();
-          var res = function (){
-            $.ajax({
-              url : "board.json",
-              type: "json"
+        this.state  = $.ajax({
+              url: "/client/board.json",
+              dataType: "json"
+            }).done(function(response) {
+              this.state = response;
             });
-        };
-        console.log(res());
-        this.state  = res();
+      console.log(this.state);
     }
     render() {
-        var lanes = [];
-        var card = {};
-        for (card in this.state.cards){
-            if(card.lane !== null) {
-                lanes.push(<Swimlane lane={card.lane} key={card.lane} cardList={this.state.cards}/>);
-            }
-        }
+      var lanes = [];
 
-        console.log(lanes.length);
-
+      this.state.swimlanes.forEach(function(lane){
+        lanes.push(<Swimlane key = {lane.name} laneName = {lane.name} cardList = {lane.cards} />)
+      });
         return <div className="board">
-            <h1>Board</h1>
-            {lanes}
+          {lanes}
         </div>;
     }
 }
